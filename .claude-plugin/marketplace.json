@@ -12,7 +12,10 @@
     "plugins": [
         {
             "name": "my-claude-code-setup",
-            "source": "agno-nymous/my-claude-code-setup",
+            "source": {
+                "type": "github",
+                "repo": "agno-nymous/my-claude-code-setup"
+            },
             "description": "Complete Claude Code workflow with brainstorming, TDD-based planning, and parallel execution",
             "category": "development",
             "tags": [
