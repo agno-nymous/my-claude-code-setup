@@ -1,0 +1,7 @@
+{
+  "name": "my-claude-code-setup",
+  "description": "A complete Claude Code workflow featuring brainstorming, TDD-based planning, and parallel execution with intelligent model selection",
+  "author": {
+    "name": "Ashish Thomas Chempolil"
+  }
+}
