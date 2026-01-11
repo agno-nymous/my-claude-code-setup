@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/mcp-marketplace-schema/main/marketplace.json",
+  "marketplace": {
+    "id": "agno-nymous/my-claude-code-setup",
+    "name": "My Claude Code Setup",
+    "description": "A complete Claude Code workflow featuring brainstorming, TDD-based planning, and parallel execution with intelligent model selection",
+    "version": "1.0.0",
+    "author": "Ashish Thomas Chempolil",
+    "homepage": "https://github.com/agno-nymous/my-claude-code-setup",
+    "repository": "https://github.com/agno-nymous/my-claude-code-setup.git",
+    "license": "MIT",
+    "tags": ["planning", "tdd", "workflow", "brainstorming", "execution"],
+    "categories": ["development", "planning", "testing"]
+  },
+  "skills": [
+    {
+      "id": "brainstorm",
+      "name": "Brainstorm",
+      "path": "skills/brainstorm.md",
+      "description": "Conversational brainstorming that refines ideas through targeted questions, triggers codebase exploration, and prepares context for planning"
+    },
+    {
+      "id": "create-plan",
+      "name": "Create Plan",
+      "path": "skills/create-plan.md",
+      "description": "Creates detailed implementation plans with atomic steps, model selection per step, dependency labels, and embedded TDD specifications"
+    },
+    {
+      "id": "execute-plan",
+      "name": "Execute Plan",
+      "path": "skills/execute-plan.md",
+      "description": "Executes implementation plans by dispatching agents based on step dependencies, following TDD with tests written before implementation"
+    }
+  ],
+  "agents": [
+    {
+      "id": "master-explorer",
+      "name": "Master Explorer",
+      "path": "agents/master-explorer.md",
+      "description": "Orchestrates multiple code and library exploration agents for comprehensive codebase analysis"
+    },
+    {
+      "id": "code-explorer",
+      "name": "Code Explorer",
+      "path": "agents/code-explorer.md",
+      "description": "Deep codebase analysis exploring execution paths, architecture layers, and dependencies"
+    },
+    {
+      "id": "library-explorer",
+      "name": "Library Explorer",
+      "path": "agents/library-explorer.md",
+      "description": "Researches external libraries, frameworks, and tools with documentation and best practices"
+    }
+  ],
+  "commands": [
+    {
+      "id": "envision",
+      "name": "envision",
+      "path": "commands/envision.md",
+      "description": "Quick command to trigger the envision workflow (brainstorm → plan → execute)"
+    }
+  ],
+  "install": {
+    "commands": [
+      "claude skill marketplace add agno-nymous/my-claude-code-setup"
+    ],
+    "skills": [
+      "brainstorm",
+      "create-plan",
+      "execute-plan"
+    ]
+  },
+  "requirements": {
+    "claude_code": ">=0.7.0",
+    "tools": [
+      "AskUserQuestion",
+      "Task",
+      "Glob",
+      "Grep",
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "TodoWrite",
+      "WebSearch"
+    ]
+  },
+  "changelog": "https://github.com/agno-nymous/my-claude-code-setup/blob/main/CHANGELOG.md"
+}
