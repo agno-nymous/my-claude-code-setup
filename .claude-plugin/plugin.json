@@ -1,7 +1,10 @@
 {
-  "name": "my-claude-code-setup",
+  "name": "envision-workflow",
   "description": "A complete Claude Code workflow featuring brainstorming, TDD-based planning, and parallel execution with intelligent model selection",
+  "version": "1.0.0",
   "author": {
     "name": "Ashish Thomas Chempolil"
-  }
+  },
+  "keywords": ["brainstorm", "planning", "tdd", "workflow", "agents"],
+  "license": "MIT"
 }

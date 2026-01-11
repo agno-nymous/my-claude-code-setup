@@ -1,57 +1,62 @@
-# My Claude Code Setup
+# Envision Workflow Plugin
 
-A complete Claude Code workflow featuring **brainstorming**, **TDD-based planning**, and **parallel execution** with intelligent model selection.
+A complete Claude Code plugin featuring **brainstorming**, **TDD-based planning**, and **parallel execution** with intelligent model selection.
 
 ## Overview
 
-This setup provides a systematic approach to feature development:
+This plugin provides a systematic approach to feature development:
 
-1. **Brainstorm** (`/brainstorm`) - Refine vague ideas into clear requirements through conversation
-2. **Plan** (`/create-plan`) - Create detailed implementation plans with atomic steps and TDD specs
-3. **Execute** (`/execute-plan`) - Execute plans with parallel agents, following TDD
+1. **Brainstorm** - Refine vague ideas into clear requirements through conversation
+2. **Plan** - Create detailed implementation plans with atomic steps and TDD specs
+3. **Execute** - Execute plans with parallel agents, following TDD
 
 ## Quick Start
 
 ### Installation
 
-#### Via Marketplace (One-Command)
+#### Via Marketplace
 
+First, add the marketplace:
 ```bash
-claude skill marketplace add ashishthomaschempolil/my-claude-code-setup
+/plugin marketplace add ashishthomaschempolil/my-claude-setup
+```
+
+Then install the plugin:
+```bash
+/plugin install envision-workflow@my-claude-setup
 ```
 
 #### Manual Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/ashishthomaschempolil/my-claude-code-setup ~/.claude/skills/my-claude-code-setup
+git clone https://github.com/ashishthomaschempolil/my-claude-setup
 
-# Or copy to your skills directory
-cp -r . ~/.claude/skills/my-claude-code-setup
+# Test locally with --plugin-dir flag
+claude --plugin-dir ./my-claude-setup
 ```
 
 ### Usage
 
 ```bash
-# Start the workflow
-/brainstorm
+# Start the workflow with the envision command
+/envision-workflow:envision Your feature idea here
 
-# After brainstorming completes, create a plan
-/create-plan
-
-# Execute the plan
-/execute-plan
+# Or use the skills directly:
+# - brainstorm skill for idea refinement
+# - create-plan skill for planning
+# - execute-plan skill for implementation
 ```
 
 ## Components
 
 ### Skills
 
-| Skill | Description | Model |
-|-------|-------------|-------|
-| **brainstorm** | Conversational refinement of ideas with targeted questions | Opus |
-| **create-plan** | Creates atomic implementation steps with model selection | Sonnet |
-| **execute-plan** | Executes plans with parallel agents + TDD | Sonnet |
+| Skill | Description |
+|-------|-------------|
+| **brainstorm** | Conversational refinement of ideas with targeted questions |
+| **create-plan** | Creates atomic implementation steps with model selection |
+| **execute-plan** | Executes plans with parallel agents + TDD |
 
 ### Agents
 
@@ -65,7 +70,7 @@ cp -r . ~/.claude/skills/my-claude-code-setup
 
 | Command | Description |
 |---------|-------------|
-| **/envision** | Quick trigger for the full envision workflow |
+| **/envision-workflow:envision** | Full envision workflow - brainstorm, plan, execute |
 
 ## How It Works
 
@@ -108,9 +113,7 @@ This workflow embeds Test-Driven Development directly into the planning process:
 
 ## Requirements
 
-- Claude Code >= 0.7.0
-- Claude Pro subscription (for Skills feature)
-- Tools: AskUserQuestion, Task, Glob, Grep, Read, Write, Edit, Bash, TodoWrite, WebSearch
+- Claude Code >= 1.0.33 (for plugin support)
 
 ## Contributing
 

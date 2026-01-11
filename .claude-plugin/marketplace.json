@@ -1,18 +1,23 @@
 {
-    "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-    "name": "my-claude-code-setup",
-    "version": "1.0.0",
+  "name": "my-claude-setup",
+  "owner": {
+    "name": "Ashish Thomas Chempolil"
+  },
+  "metadata": {
     "description": "A complete Claude Code workflow featuring brainstorming, TDD-based planning, and parallel execution with intelligent model selection",
-    "owner": {
-        "name": "Ashish Thomas Chempolil",
-        "email": "ashish@example.com"
-    },
-    "plugins": [
-        {
-            "name": "my-claude-code-setup",
-            "description": "Complete Claude Code workflow with brainstorming, TDD-based planning, and parallel execution",
-            "source": ".",
-            "category": "development"
-        }
-    ]
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "envision-workflow",
+      "source": ".",
+      "description": "Complete Claude Code workflow with brainstorming, TDD-based planning, and parallel execution",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ashish Thomas Chempolil"
+      },
+      "keywords": ["brainstorm", "planning", "tdd", "workflow", "agents"],
+      "category": "development"
+    }
+  ]
 }
