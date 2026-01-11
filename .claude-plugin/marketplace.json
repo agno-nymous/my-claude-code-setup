@@ -1,21 +1,27 @@
 {
-  "name": "my-claude-code-setup",
-  "owner": {
-    "name": "Ashish Thomas Chempolil",
-    "email": "ashish@example.com",
-    "url": "https://github.com/agno-nymous"
-  },
-  "metadata": {
-    "description": "A complete Claude Code workflow featuring brainstorming, TDD-based planning, and parallel execution with intelligent model selection",
-    "version": "1.0.0"
-  },
-  "plugins": [
-    {
-      "name": "my-claude-code-setup",
-      "source": ".",
-      "description": "Complete Claude Code workflow with brainstorming, TDD-based planning, and parallel execution",
-      "category": "development",
-      "tags": ["planning", "tdd", "workflow", "brainstorming", "execution"]
-    }
-  ]
+    "name": "my-claude-code-setup",
+    "owner": {
+        "name": "Ashish Thomas Chempolil",
+        "email": "ashish@example.com",
+        "url": "https://github.com/agno-nymous"
+    },
+    "metadata": {
+        "description": "A complete Claude Code workflow featuring brainstorming, TDD-based planning, and parallel execution with intelligent model selection",
+        "version": "1.0.0"
+    },
+    "plugins": [
+        {
+            "name": "my-claude-code-setup",
+            "source": "agno-nymous/my-claude-code-setup",
+            "description": "Complete Claude Code workflow with brainstorming, TDD-based planning, and parallel execution",
+            "category": "development",
+            "tags": [
+                "planning",
+                "tdd",
+                "workflow",
+                "brainstorming",
+                "execution"
+            ]
+        }
+    ]
 }
