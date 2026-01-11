@@ -1,30 +1,18 @@
 {
+    "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
     "name": "my-claude-code-setup",
+    "version": "1.0.0",
+    "description": "A complete Claude Code workflow featuring brainstorming, TDD-based planning, and parallel execution with intelligent model selection",
     "owner": {
         "name": "Ashish Thomas Chempolil",
-        "email": "ashish@example.com",
-        "url": "https://github.com/agno-nymous"
-    },
-    "metadata": {
-        "description": "A complete Claude Code workflow featuring brainstorming, TDD-based planning, and parallel execution with intelligent model selection",
-        "version": "1.0.0"
+        "email": "ashish@example.com"
     },
     "plugins": [
         {
             "name": "my-claude-code-setup",
-            "source": {
-                "type": "github",
-                "repo": "agno-nymous/my-claude-code-setup"
-            },
             "description": "Complete Claude Code workflow with brainstorming, TDD-based planning, and parallel execution",
-            "category": "development",
-            "tags": [
-                "planning",
-                "tdd",
-                "workflow",
-                "brainstorming",
-                "execution"
-            ]
+            "source": ".",
+            "category": "development"
         }
     ]
 }
